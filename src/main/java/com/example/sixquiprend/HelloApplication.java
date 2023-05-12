@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloApplication extends Application {
     @Override
@@ -19,5 +21,13 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         launch();
+        setCards();
+    }
+    public static void setCards(){
+        List<Cards> cartes = new ArrayList<>();
+        for (int i = 1; i <= 104; i++) {
+            Cards cards = new Cards(i);
+            cartes.add(cards);
+        }
     }
 }
