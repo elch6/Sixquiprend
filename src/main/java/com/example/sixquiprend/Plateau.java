@@ -12,8 +12,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import java.util.List;
 
 public class Plateau extends Application {
+    private String joueur1;
+    private String joueur2;
     @Override
     public void start(Stage plateau) throws Exception {
         HBox hboxCartes = new HBox();
@@ -34,8 +37,8 @@ public class Plateau extends Application {
             imageView.setFitHeight(100);
             bouton.setGraphic(imageView);
         }
-
-        Label labelJoueur = new Label("Les cartes de");
+        afficherNomsJoueurs();
+        Label labelJoueur = new Label("Les cartes de " + joueur1);
         labelJoueur.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
         labelJoueur.setPadding(new Insets(10, 10, 10, 10));
 
@@ -66,5 +69,11 @@ public class Plateau extends Application {
         plateau.setTitle("Six qui prend");
         plateau.setScene(scene);
         plateau.show();
+    }
+    public void afficherNomsJoueurs() {
+        CreaPlayers creaPlayers = new CreaPlayers();
+        List<String> nomsJoueurs = creaPlayers.getNomsJoueurs();
+        joueur1 = nomsJoueurs.get(0);
+        joueur2 = nomsJoueurs.get(1);
     }
 }

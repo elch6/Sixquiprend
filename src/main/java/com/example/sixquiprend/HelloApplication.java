@@ -43,9 +43,9 @@ public class HelloApplication extends Application {
         startBouton.setOnAction(event -> {
             primaryStage.close();
             Stage newStage = new Stage();
-            Players players = new Players();
+            CreaPlayers creaPlayers = new CreaPlayers();
             try {
-                players.start(newStage);
+                creaPlayers.start(newStage);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -65,10 +65,10 @@ public class HelloApplication extends Application {
 
     }
     public static void setCards(){
-        List<Cards> cartes = new ArrayList<>();
+        List<Carte> cartes = new ArrayList<>();
         for (int i = 1; i <= 104; i++) {
-            Cards cards = new Cards(i);
-            cartes.add(cards);
+            Carte carte = new Carte(i);
+            cartes.add(carte);
         }
     }
 }

@@ -1,9 +1,9 @@
 package com.example.sixquiprend;
 
-public class Cards {
+public class Carte {
     private int num;
     private int tetesDeBoeuf;
-    public Cards(int num) {
+    public Carte(int num) {
         this.num = num;
         this.tetesDeBoeuf = calculateTetesDeBoeuf(num);
     }
