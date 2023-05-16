@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9fcd1f0-a392-4ef3-84fc-18cbb752c29a" name="Changes" comment="t" />
+    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="Start">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" afterDir="false" />
+    </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,11 +81,30 @@
       <option name="project" value="LOCAL" />
       <updated>1683879622777</updated>
     </task>
+    <task id="LOCAL-00001" summary="Start">
+      <created>1683877925829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683877925829</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Start">
+      <created>1683878623229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683878623229</updated>
+    </task>
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Sixquiprend$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1683627489398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.sixquiprend.*</FILTER>
+    </SUITE>
   </component>
 </project>
