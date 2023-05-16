@@ -12,7 +12,7 @@ import java.util.List;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Start.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("plateau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("6 qui prend!");
         stage.setScene(scene);
@@ -21,7 +21,10 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         launch();
-        setCards();
+        //setCards();
+        Plateau plateau = new Plateau();
+        plateau.setCarte1();
+
     }
     public static void setCards(){
         List<Cards> cartes = new ArrayList<>();
