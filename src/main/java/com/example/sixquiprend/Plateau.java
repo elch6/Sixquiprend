@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.util.List;
+import java.util.Objects;
 
 public class Plateau extends Application {
     private String joueur1;
@@ -31,7 +32,13 @@ public class Plateau extends Application {
 
         for (int i = 0; i < 10; i++) {
             Button bouton = (Button) hboxCartes.getChildren().get(i);
-            Image image = new Image("C:\\Users\\elena\\test\\Sixquiprend\\src\\main\\resources\\com\\example\\sixquiprend\\cartes\\carte1.png");
+            Image image = new Image(
+                    Objects.requireNonNull(
+                            getClass().getResource(
+                                    "cartes/carte1.png")
+                    ).toExternalForm()
+            );
+            // Image image = new Image("C:\\Users\\elena\\test\\Sixquiprend\\src\\main\\resources\\com\\example\\sixquiprend\\cartes\\carte1.png");
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(70);
             imageView.setFitHeight(100);
@@ -49,7 +56,12 @@ public class Plateau extends Application {
 
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 6; col++) {
-                Image image = new Image("C:\\Users\\elena\\test\\Sixquiprend\\src\\main\\resources\\com\\example\\sixquiprend\\cartes\\carte1.png");
+                Image image = new Image(
+                        Objects.requireNonNull(
+                                getClass().getResource(
+                                        "cartes/carte1.png")
+                        ).toExternalForm()
+                );
                 ImageView imageView = new ImageView(image);
                 imageView.setFitWidth(70);
                 imageView.setFitHeight(100);
