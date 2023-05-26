@@ -24,6 +24,10 @@ public class CreaPlayers extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        Label lblJoueur = new Label("Nom du joueur :");
+        lblJoueur.setStyle("-fx-font-size: 40;");
+        lblJoueur.setPadding(new Insets(30, 30, 30, 30));
+
         joueurField = new TextField();
         joueurField.setPromptText("Entrez un nom");
         joueurField.setPrefSize(200, 40);
@@ -43,6 +47,11 @@ public class CreaPlayers extends Application {
             if (!nom.isEmpty()) {
                 listPlayer.getItems().add(nom);
                 joueurField.clear();
+                if (listPlayer.getItems().size() >= 10) {
+                    joueurField.setVisible(false);
+                    ajoutBouton.setVisible(false);
+                    lblJoueur.setText("Nombre maximum de\n      joueur atteint");
+                }
             }
         });
 
@@ -60,23 +69,26 @@ public class CreaPlayers extends Application {
             startBouton.setStyle("-fx-background-color: #6d61a8; -fx-text-fill: white;  -fx-font-size: 40; -fx-background-radius: 20;");
         });
         startBouton.setOnAction(event -> {
-            stage.close();
-            Stage newStage = new Stage();
-            Plateau plateau = new Plateau();
-            try {
-                plateau.start(newStage);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
+            if (listPlayer.getItems().size() < 1){
+
+            } else {
+                stage.close();
+                Stage newStage = new Stage();
+                Plateau plateau = new Plateau();
+                try {
+                    plateau.start(newStage);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             }
+
         });
 
         HBox hboxCom = new HBox(startBouton);
         hboxCom.setPadding(new Insets(50, 30, 30, 30));
         hboxCom.setAlignment(Pos.CENTER);
 
-        Label lblJoueur = new Label("Nom du joueur :");
-        lblJoueur.setStyle("-fx-font-size: 40;");
-        lblJoueur.setPadding(new Insets(30, 30, 30, 30));
+
 
         VBox inputBox = new VBox();
         inputBox.setSpacing(10);
@@ -105,6 +117,7 @@ public class CreaPlayers extends Application {
         stage.setTitle("Création des joueurs");
         stage.setScene(scene);
         stage.show();
+
     }
     public List<String> getNomsJoueurs() {
         ObservableList<String> joueurs = listPlayer.getItems();
