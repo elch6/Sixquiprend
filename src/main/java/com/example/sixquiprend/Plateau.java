@@ -16,8 +16,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Plateau extends Application {
-    private String joueur1;
-    private String joueur2;
+    private List<String> players;
     @Override
     public void start(Stage plateau) throws Exception {
         HBox hboxCartes = new HBox();
@@ -38,14 +37,13 @@ public class Plateau extends Application {
                                     "cartes/carte1.png")
                     ).toExternalForm()
             );
-            // Image image = new Image("C:\\Users\\elena\\test\\Sixquiprend\\src\\main\\resources\\com\\example\\sixquiprend\\cartes\\carte1.png");
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(70);
             imageView.setFitHeight(100);
             bouton.setGraphic(imageView);
         }
         afficherNomsJoueurs();
-        Label labelJoueur = new Label("Les cartes de " + joueur1);
+        Label labelJoueur = new Label("Les cartes de " + players.get(0));
         labelJoueur.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
         labelJoueur.setPadding(new Insets(10, 10, 10, 10));
 
@@ -83,9 +81,10 @@ public class Plateau extends Application {
         plateau.show();
     }
     public void afficherNomsJoueurs() {
+        // TODO (Elena) : finir cette fonction
         CreaPlayers creaPlayers = new CreaPlayers();
-        List<String> nomsJoueurs = creaPlayers.getNomsJoueurs();
-        joueur1 = nomsJoueurs.get(0);
-        joueur2 = nomsJoueurs.get(1);
+        players = creaPlayers.getNomsJoueurs();
+        //joueur1 = nomsJoueurs.get(0);
+        // joueur2 = nomsJoueurs.get(1);
     }
 }

@@ -13,6 +13,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,9 +71,7 @@ public class CreaPlayers extends Application {
             startBouton.setStyle("-fx-background-color: #6d61a8; -fx-text-fill: white;  -fx-font-size: 40; -fx-background-radius: 20;");
         });
         startBouton.setOnAction(event -> {
-            if (listPlayer.getItems().size() < 1){
-
-            } else {
+            if (listPlayer.getItems().size() >= 1) {
                 stage.close();
                 Stage newStage = new Stage();
                 Plateau plateau = new Plateau();
@@ -80,8 +80,14 @@ public class CreaPlayers extends Application {
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
+            } else {
+                // Afficher un message d'erreur
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText("Aucun joueur inscrit");
+                alert.setContentText("Veuillez ajouter au moins un joueur avant de commencer.");
+                alert.showAndWait();
             }
-
         });
 
         HBox hboxCom = new HBox(startBouton);
