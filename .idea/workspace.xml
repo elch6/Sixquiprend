@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="debut gestion joueurs" />
+    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="t" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,8 +109,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Application.CreaPlayers" />
         <item itemvalue="Application.Plateau" />
+        <item itemvalue="Application.CreaPlayers" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -123,20 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683877474387</updated>
-    </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1683878199097</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1683878199098</updated>
-    </task>
-    <task id="LOCAL-00002" summary="test">
-      <created>1683879622777</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1683879622777</updated>
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1683877925829</created>
