@@ -1,9 +1,12 @@
 package com.example.sixquiprend;
 
+import com.example.sixquiprend.cards.CardsReserve;
+import com.example.sixquiprend.players.Players;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -94,8 +97,6 @@ public class CreaPlayers extends Application {
         hboxCom.setPadding(new Insets(50, 30, 30, 30));
         hboxCom.setAlignment(Pos.CENTER);
 
-
-
         VBox inputBox = new VBox();
         inputBox.setSpacing(10);
         inputBox.setPadding(new Insets(10));
@@ -123,7 +124,6 @@ public class CreaPlayers extends Application {
         stage.setTitle("Création des joueurs");
         stage.setScene(scene);
         stage.show();
-
     }
     public List<String> getNomsJoueurs() {
         ObservableList<String> joueurs = listPlayer.getItems();

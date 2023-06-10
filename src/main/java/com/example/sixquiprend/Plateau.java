@@ -1,5 +1,7 @@
 package com.example.sixquiprend;
 
+import com.example.sixquiprend.cards.CardsReserve;
+import com.example.sixquiprend.cards.Carte;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -17,8 +19,15 @@ import java.util.Objects;
 
 public class Plateau extends Application {
     private List<String> players;
+    private CardsReserve cardsReserve;
+
     @Override
     public void start(Stage plateau) throws Exception {
+        cardsReserve = new CardsReserve();
+        afficherNomsJoueurs();
+        cardsReserve.distributeCards(players);
+
+
         HBox hboxCartes = new HBox();
         hboxCartes.setPadding(new Insets(10, 10, 10, 10));
         hboxCartes.setStyle("-fx-background-color: #D3D3D3; -fx-background-radius: 20;");
@@ -42,10 +51,6 @@ public class Plateau extends Application {
             imageView.setFitHeight(100);
             bouton.setGraphic(imageView);
         }
-        afficherNomsJoueurs();
-        Label labelJoueur = new Label("Les cartes de " + players.get(0));
-        labelJoueur.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
-        labelJoueur.setPadding(new Insets(10, 10, 10, 10));
 
         GridPane plateauGrid = new GridPane();
         plateauGrid.setPadding(new Insets(10, 10, 10, 10));
@@ -70,21 +75,51 @@ public class Plateau extends Application {
         VBox vboxPlateau = new VBox();
         vboxPlateau.setPadding(new Insets(10, 10, 10, 10));
         vboxPlateau.setSpacing(5);
-        vboxPlateau.getChildren().addAll(labelJoueur, hboxCartes, plateauGrid);
+
+        for (String nomJoueur : players) {
+            List<Carte> cartesJoueur = cardsReserve.getPlayerCards(nomJoueur);
+
+            Label labelJoueur = new Label("Les cartes de " + nomJoueur);
+            labelJoueur.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
+            labelJoueur.setPadding(new Insets(10, 10, 10, 10));
+
+            HBox hboxCartesJoueur = new HBox();
+            hboxCartesJoueur.setPadding(new Insets(10, 10, 10, 10));
+            hboxCartesJoueur.setSpacing(10);
+
+            for (Carte carte : cartesJoueur) {
+                Image imageCarte = new Image(
+                        Objects.requireNonNull(
+                                getClass().getResource("cartes/carte1.png")
+                        ).toExternalForm()
+                );
+                ImageView imageViewCarte = new ImageView(imageCarte);
+                imageViewCarte.setFitWidth(70);
+                imageViewCarte.setFitHeight(100);
+                hboxCartesJoueur.getChildren().add(imageViewCarte);
+            }
+
+            VBox vboxJoueur = new VBox();
+            vboxJoueur.getChildren().addAll(labelJoueur, hboxCartesJoueur);
+            vboxPlateau.getChildren().add(vboxJoueur);
+        }
 
         BorderPane borderPane = new BorderPane();
         borderPane.setLeft(vboxPlateau);
+        borderPane.setCenter(plateauGrid);
 
         Scene scene = new Scene(borderPane, 1280, 645);
         plateau.setTitle("Six qui prend");
         plateau.setScene(scene);
         plateau.show();
     }
+
     public void afficherNomsJoueurs() {
-        // TODO (Elena) : finir cette fonction
         CreaPlayers creaPlayers = new CreaPlayers();
         players = creaPlayers.getNomsJoueurs();
-        //joueur1 = nomsJoueurs.get(0);
-        // joueur2 = nomsJoueurs.get(1);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }

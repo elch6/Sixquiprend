@@ -14,7 +14,6 @@ public class gameboard {
     private CardsReserve cardsReserve;
     private List<CardsRow> cardsRows;
     private Integer turn ;
-
     private Players currentPlayer;
 
     //creating game board with players and cards
@@ -22,16 +21,6 @@ public class gameboard {
         this.playerQueue = new PlayerQueue(players);
         this.cardsReserve = new CardsReserve();
         this.turn = 10;
-
-        // distributing 10 cards to players
-        for (Players player : players) {
-            player.addCarte((Carte) cardsReserve.getCards(10));
-        }
-
-        // creating 4 rows with 1 card each
-        for (int i = 0; i < 4; i++) {
-            cardsRows.add(new CardsRow((Carte) cardsReserve.getCards(1)));
-        }
 
     }
 
@@ -72,9 +61,7 @@ public class gameboard {
             // if there is more than one row left, the card will be added to the row with the lowest difference between the value of the last card and the value of the card played
             copyCardsRows.sort(Comparator.comparingInt(row -> row.getValueOfLastCard() - card.getValue()));
             copyCardsRows.get(0).addCard(card);
-
         }
-
         turn--;
     }
 }
