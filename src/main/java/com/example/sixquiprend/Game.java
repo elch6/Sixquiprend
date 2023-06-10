@@ -64,7 +64,6 @@ public class Game extends Application {
                 imageView.setFitHeight(200);
                 bouton.setGraphic(imageView);
             }
-
             vboxPlateau.getChildren().addAll(labelJoueur, hboxCartes);
         }
 
