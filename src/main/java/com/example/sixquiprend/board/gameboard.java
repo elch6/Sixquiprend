@@ -2,7 +2,7 @@ package com.example.sixquiprend.board;
 
 import com.example.sixquiprend.cards.CardsReserve;
 import com.example.sixquiprend.cards.CardsRow;
-import com.example.sixquiprend.cards.Carte;
+import com.example.sixquiprend.cards.Card;
 import com.example.sixquiprend.players.PlayerQueue;
 import com.example.sixquiprend.players.Players;
 import lombok.Data;
@@ -26,27 +26,27 @@ public class gameboard {
 
         // distributing 10 cards to players
         for (Players player : players) {
-            player.addCarte((Carte) cardsReserve.getCards(10));
+            player.addCarte((Card) cardsReserve.getCards(10));
         }
 
         // creating 4 rows with 1 card each
         for (int i = 0; i < 4; i++) {
-            cardsRows.add(new CardsRow((Carte) cardsReserve.getCards(1)));
+            cardsRows.add(new CardsRow((Card) cardsReserve.getCards(1)));
         }
 
     }
 
-    public void nextTurn(List<Carte> cardsPlayed ) {
+    public void nextTurn(List<Card> cardsPlayed ) {
         if (turn == 0) {
             // the game is over
             return;
         }
 
         // sorting cards by lowest to the highest value to determine the order of the players
-        cardsPlayed.sort(Comparator.comparingInt(Carte::getValue));
+        cardsPlayed.sort(Comparator.comparingInt(Card::getValue));
 
         // iterating over the cards played to add them to the rows
-        for (Carte card : cardsPlayed) {
+        for (Card card : cardsPlayed) {
 
             // creating a copy of the rows
             List<CardsRow> copyCardsRows = new ArrayList<>(cardsRows);

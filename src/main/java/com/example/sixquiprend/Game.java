@@ -1,7 +1,7 @@
 package com.example.sixquiprend;
 
 import com.example.sixquiprend.cards.CardsReserve;
-import com.example.sixquiprend.cards.Carte;
+import com.example.sixquiprend.cards.Card;
 import com.example.sixquiprend.players.Players;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Plateau extends Application {
+public class Game extends Application {
     private List<Players> players;
     private CardsReserve cardsReserve;
     @Override
-    public void start(Stage plateau) throws Exception {
+    public void start(Stage plateau) {
         cardsReserve = new CardsReserve();
-        System.out.println(cardsReserve);
+        //System.out.println(cardsReserve);
 
         VBox vboxPlateau = new VBox();
         vboxPlateau.setPadding(new Insets(10, 10, 10, 10));
@@ -50,9 +50,9 @@ public class Plateau extends Application {
 
             for (int i = 0; i < 10; i++) {
                 Button bouton = (Button) hboxCartes.getChildren().get(i);
-                Carte carte = cardsReserve.getCardsStack().remove(0);
+                Card carte = cardsReserve.getCardsStack().remove(0);
                 String imagepath = "cartes/carte" + carte.getValue() + ".png";
-                System.out.println(imagepath);
+                //System.out.println(imagepath);
                 Image image = new Image(
                         Objects.requireNonNull(
                                 getClass().getResource(
@@ -64,7 +64,6 @@ public class Plateau extends Application {
                 imageView.setFitHeight(200);
                 bouton.setGraphic(imageView);
             }
-
             vboxPlateau.getChildren().addAll(labelJoueur, hboxCartes);
         }
 
@@ -74,7 +73,7 @@ public class Plateau extends Application {
         plateauGrid.setVgap(10);
 
         for (int row = 0; row < 4; row++) {
-            Carte carte = cardsReserve.getCardsStack().remove(0);
+            Card carte = cardsReserve.getCardsStack().remove(0);
             String imagepath = "cartes/carte" + carte.getValue() + ".png";
             Image image = new Image(
                     Objects.requireNonNull(
@@ -100,14 +99,11 @@ public class Plateau extends Application {
     }
 
     public void afficherNomsJoueurs() {
-        // TODO (Elena) : finir cette fonction
         CreaPlayers creaPlayers = new CreaPlayers();
         List<String> nomsJoueurs = creaPlayers.getNomsJoueurs();
         players = new ArrayList<>();
         for (String nom : nomsJoueurs) {
             players.add(new Players(nom));
         }
-        //joueur1 = nomsJoueurs.get(0);
-        // joueur2 = nomsJoueurs.get(1);
     }
 }

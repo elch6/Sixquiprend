@@ -1,6 +1,6 @@
 package com.example.sixquiprend.players;
 
-import com.example.sixquiprend.cards.Carte;
+import com.example.sixquiprend.cards.Card;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 public class Players {
 
     private String nom;
-    private List<Carte> cartes;
+    private List<Card> cartes;
 
     public Players(String nom) {
         this.nom = nom;
@@ -20,11 +20,11 @@ public class Players {
         return nom;
     }
 
-    public List<Carte> getCartes() {
+    public List<Card> getCartes() {
         return cartes;
     }
 
-    public void addCarte(Carte carte) {
+    public void addCarte(Card carte) {
         cartes.add(carte);
     }
 }

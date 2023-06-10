@@ -3,11 +3,11 @@ package com.example.sixquiprend.cards;
 import lombok.Data;
 
 @Data
-public class Carte {
+public class Card {
     private int cardNumber;
     private int PenalityPoints;
     private String cardPath;
-    public Carte(int cardNumber) {
+    public Card(int cardNumber) {
         this.cardNumber = cardNumber;
         this.PenalityPoints = calculateTetesDeBoeuf(cardNumber);
         this.cardPath = "src/main/resources/com/example/sixquiprend/cartes/carte" + cardNumber + ".png";

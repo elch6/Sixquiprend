@@ -1,6 +1,6 @@
 package com.example.sixquiprend;
 
-import com.example.sixquiprend.cards.Carte;
+import com.example.sixquiprend.cards.Card;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HelloApplication extends Application {
+public class Start extends Application {
     public void start(Stage primaryStage) throws Exception {
         BorderPane borderPane = new BorderPane();
         borderPane.setPadding(new Insets(20, 20, 20, 20));
@@ -66,9 +66,9 @@ public class HelloApplication extends Application {
 
     }
     public static void setCards(){
-        List<Carte> cartes = new ArrayList<>();
+        List<Card> cartes = new ArrayList<>();
         for (int i = 1; i <= 104; i++) {
-            Carte carte = new Carte(i);
+            Card carte = new Card(i);
             cartes.add(carte);
         }
     }
