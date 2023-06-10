@@ -7,17 +7,17 @@ import java.util.List;
 @Data
 public class CardsRow {
 
-    private List<Carte> cardsRow;
+    private List<Card> cardsRow;
 
-    public CardsRow(Carte baseCard) {
+    public CardsRow(Card baseCard) {
         this.cardsRow.add(baseCard);
     }
 
-    public List<Carte> getCardsRow() {
+    public List<Card> getCardsRow() {
         return cardsRow;
     }
 
-    public void addCard(Carte card) {
+    public void addCard(Card card) {
         cardsRow.add(card);
 
         if (cardsRow.size() == 6) {

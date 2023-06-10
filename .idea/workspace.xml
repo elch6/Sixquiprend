@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="debut gestion joueurs">
+    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="gestion des cartes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Plateau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/CreaPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/CreaPlayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/board/gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/board/gameboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/Carte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/players/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/players/Players.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +68,23 @@
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/elena/test/Sixquiprend/src/main/java/com/example/sixquiprend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/elena/test/Sixquiprend&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Users/elena/test/Sixquiprend/src/main/java/com/example/sixquiprend",
+    "last_opened_file_path": "C:/Users/elena/Sixquiprend-master (1)/Sixquiprend-master",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager" selected="Application.HelloApplication">
+}]]></component>
+  <component name="RunManager" selected="Application.Start">
     <configuration name="CreaPlayers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.sixquiprend.CreaPlayers" />
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.Carte" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.sixquiprend.HelloApplication" />
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.sixquiprend.Game" />
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.Carte" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,7 +110,7 @@
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.Carte" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Plateau" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.sixquiprend.Plateau" />
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.sixquiprend.Start" />
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.Carte" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.Start" />
         <item itemvalue="Application.CreaPlayers" />
-        <item itemvalue="Application.Plateau" />
+        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -199,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686406966973</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="gestion des cartes">
+      <created>1686415181598</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686415181598</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,7 +232,8 @@
     <MESSAGE value="creation Plateau" />
     <MESSAGE value="creation joueur" />
     <MESSAGE value="debut gestion joueurs" />
-    <option name="LAST_COMMIT_MESSAGE" value="debut gestion joueurs" />
+    <MESSAGE value="gestion des cartes" />
+    <option name="LAST_COMMIT_MESSAGE" value="gestion des cartes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

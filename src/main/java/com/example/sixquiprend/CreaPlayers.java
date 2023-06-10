@@ -74,9 +74,9 @@ public class CreaPlayers extends Application {
             if (listPlayer.getItems().size() >= 1) {
                 stage.close();
                 Stage newStage = new Stage();
-                Plateau plateau = new Plateau();
+                Game game = new Game();
                 try {
-                    plateau.start(newStage);
+                    game.start(newStage);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -93,8 +93,6 @@ public class CreaPlayers extends Application {
         HBox hboxCom = new HBox(startBouton);
         hboxCom.setPadding(new Insets(50, 30, 30, 30));
         hboxCom.setAlignment(Pos.CENTER);
-
-
 
         VBox inputBox = new VBox();
         inputBox.setSpacing(10);
@@ -123,8 +121,8 @@ public class CreaPlayers extends Application {
         stage.setTitle("Création des joueurs");
         stage.setScene(scene);
         stage.show();
-
     }
+
     public List<String> getNomsJoueurs() {
         ObservableList<String> joueurs = listPlayer.getItems();
         List<String> nomsJoueurs = new ArrayList<>();
