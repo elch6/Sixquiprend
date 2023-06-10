@@ -1,9 +1,10 @@
 package com.example.sixquiprend.cards;
 
 import com.example.sixquiprend.players.Players;
+import lombok.Data;
 
 import java.util.List;
-
+@Data
 public class CardsRow {
 
     private List<Carte> cardsRow;

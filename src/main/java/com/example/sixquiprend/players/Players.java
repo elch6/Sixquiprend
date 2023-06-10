@@ -1,10 +1,11 @@
 package com.example.sixquiprend.players;
 
 import com.example.sixquiprend.cards.Carte;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Data
 public class Players {
 
     private String nom;

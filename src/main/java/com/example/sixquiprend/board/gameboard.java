@@ -5,9 +5,10 @@ import com.example.sixquiprend.cards.CardsRow;
 import com.example.sixquiprend.cards.Carte;
 import com.example.sixquiprend.players.PlayerQueue;
 import com.example.sixquiprend.players.Players;
+import lombok.Data;
 
 import java.util.*;
-
+@Data
 public class gameboard {
 
     private PlayerQueue playerQueue;
