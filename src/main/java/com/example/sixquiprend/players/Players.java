@@ -1,4 +1,6 @@
-package com.example.sixquiprend;
+package com.example.sixquiprend.players;
+
+import com.example.sixquiprend.cards.Carte;
 
 import java.util.ArrayList;
 import java.util.List;

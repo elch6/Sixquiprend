@@ -4,15 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="debut gestion joueurs">
+    <list default="true" id="b55b62bd-9d05-416b-af57-e8ae7787a2cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/board/gameboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsReserve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/CardsRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/cards/Carte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/players/PlayerQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2023_10_29_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2023_10_29__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Carte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/players/Players.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +59,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2PgSx1DzfNL5sfonvPT2uVKvtZS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,7 +74,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/elena/test/Sixquiprend/src/main/java/com/example/sixquiprend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/elena/test/Sixquiprend&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/elena/test/Sixquiprend&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.HelloApplication">
@@ -64,7 +84,7 @@
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,7 +97,7 @@
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,7 +110,7 @@
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,7 +123,7 @@
       <module name="Sixquiprend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sixquiprend.*" />
+          <option name="PATTERN" value="com.example.sixquiprend.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,15 +198,19 @@
       <option name="project" value="LOCAL" />
       <updated>1684222689697</updated>
     </task>
-    <task id="LOCAL-00008" summary="debut gestion joueurs">
-      <created>1685096703715</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1685096703715</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
@@ -195,6 +219,10 @@
     <MESSAGE value="creation joueur" />
     <MESSAGE value="debut gestion joueurs" />
     <option name="LAST_COMMIT_MESSAGE" value="debut gestion joueurs" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Sixquiprend$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1683627489398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

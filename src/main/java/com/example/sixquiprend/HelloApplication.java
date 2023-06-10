@@ -1,5 +1,6 @@
 package com.example.sixquiprend;
 
+import com.example.sixquiprend.cards.Carte;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
