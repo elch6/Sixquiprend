@@ -1,8 +1,10 @@
 package com.example.sixquiprend.players;
 
+import lombok.Data;
+
 import java.util.List;
 import java.util.Map;
-
+@Data
 public class PlayerQueue { // this class manage the queue of players and the current player
 
     private List<Players> playersQueue;
